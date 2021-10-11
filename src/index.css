@@ -1,6 +1,31 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: blueviolet;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(9, 9, 211);
   color: #fff;
+}
+
+.fontawesome {
+  font-size: 25px;
+}
+
+.appHeader {
+  background-color: blue;
+  padding: 0.5rem 4rem;
+}
+
+.headerFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
 }
