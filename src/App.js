@@ -1,11 +1,14 @@
-import Header from './components/Header';
+import { Switch, Route } from 'react-router-dom';
 import Main from './components/Main';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
+      <Switch>
+        <Route path="/">
+          <Main />
+        </Route>
+      </Switch>
     </div>
   );
 }
