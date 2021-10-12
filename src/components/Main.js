@@ -1,18 +1,8 @@
 import React from 'react';
+/* eslint-disable */
 
 const Main = () => {
-  const countries = [
-    'Spain',
-    'Germany',
-    'France',
-    'Italy',
-    'Netherlands',
-    'Belgium',
-    'Portugal',
-    'Switzerland',
-    'Denmark',
-    'United Kingdom',
-  ];
+  getData()
   return (
     <h1>
       Goodby
