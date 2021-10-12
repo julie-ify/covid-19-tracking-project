@@ -13,8 +13,8 @@ export const getCountries = () => async (dispatch) => {
     id: country.id,
     name: country.name,
     today_deaths: country.today_deaths,
+    today_confirmed: country.today_confirmed,
   }));
-
   if (countriesData) {
     dispatch({
       type: GET_COUNTRIES,

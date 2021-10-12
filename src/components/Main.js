@@ -27,13 +27,20 @@ const Main = () => {
         }
       });
     });
-  // console.log(CountryWithRegion);
+
+  const totalConfirmedCases = CountryWithRegion.reduce((initial, element) => {
+    return initial + element.today_confirmed;
+  }, 0);
   return (
     <div>
       <div>
+        <div>
+          <h1>Total Confirmed Cases in Europe Today</h1>
+          <span>{totalConfirmedCases}</span>
+        </div>
         <ul>
           {CountryWithRegion.map((country) => (
-            <SelectCountry country={country} />
+            <SelectCountry country={country} key={country.id} />
           ))}
         </ul>
       </div>
