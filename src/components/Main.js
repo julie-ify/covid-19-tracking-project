@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import CountryHeader from './CountryHeader';
 import SelectCountry from './SelectCountry';
 /* eslint-disable */
 
@@ -27,17 +28,10 @@ const Main = () => {
         }
       });
     });
-
-  const totalConfirmedCases = CountryWithRegion.reduce((initial, element) => {
-    return initial + element.today_confirmed;
-  }, 0);
   return (
     <div>
       <div>
-        <div>
-          <h1>Total Confirmed Cases in Europe Today</h1>
-          <span>{totalConfirmedCases}</span>
-        </div>
+      <CountryHeader region={CountryWithRegion} />
         <ul>
           {CountryWithRegion.map((country) => (
             <SelectCountry country={country} key={country.id} />

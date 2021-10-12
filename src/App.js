@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import store from './redux/ConfigureStore';
 import Main from './components/Main';
 import { getCountries } from './redux/countries/Countries';
+import CountryDetails from './components/CountryDetails';
 
 function App() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" exact>
           <Main />
         </Route>
+        <Route path="/:id" exact component={CountryDetails} />
       </Switch>
     </div>
   );
