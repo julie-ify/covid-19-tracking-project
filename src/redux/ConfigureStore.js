@@ -4,5 +4,5 @@ import thunk from 'redux-thunk';
 import countriesReducer from './countries/Countries';
 
 const store = createStore(countriesReducer, applyMiddleware(logger, thunk));
- 
+
 export default store;
