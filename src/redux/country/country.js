@@ -15,6 +15,7 @@ export const getCountry = (payload) => async (dispatch) => {
     name: country.name,
     today_deaths: country.today_deaths,
     today_confirmed: country.today_confirmed,
+    regions: country.regions,
   }));
   if (countryData) {
     dispatch({

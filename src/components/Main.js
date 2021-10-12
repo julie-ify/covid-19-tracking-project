@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import CountryHeader from './CountryHeader';
+import Header from './Header';
 import SelectCountry from './SelectCountry';
 /* eslint-disable */
 
@@ -30,6 +31,7 @@ const Main = () => {
     });
   return (
     <div>
+      <Header />
       <div>
       <CountryHeader region={CountryWithRegion} />
         <ul>
