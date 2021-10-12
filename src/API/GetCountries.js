@@ -19,7 +19,7 @@ const countries = [
 ];
 
 const getData = (data, date) => {
-  const rawData = data.date[date].countries;
+  const rawData = data.dates[date].countries;
 
   const dataObj = Object.entries(rawData);
   const dataArray = [];
@@ -35,4 +35,5 @@ const getData = (data, date) => {
   console.log(dataArray);
   return dataArray;
 };
+
 export { getCovidData, getData };
