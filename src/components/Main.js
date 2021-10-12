@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import SelectCountry from './SelectCountry';
 /* eslint-disable */
 
 const Main = () => {
@@ -32,7 +33,7 @@ const Main = () => {
       <div>
         <ul>
           {CountryWithRegion.map((country) => (
-            <li key={country.id}>{country.name}</li>
+            <SelectCountry country={country} />
           ))}
         </ul>
       </div>
