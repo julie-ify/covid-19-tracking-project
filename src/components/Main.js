@@ -5,7 +5,7 @@ import SelectCountry from './SelectCountry';
 /* eslint-disable */
 
 const Main = () => {
-  const countries = useSelector((state) => state.countries);
+  const countries = useSelector((state) => state.countriesReducer.countries);
   const CountryWithRegion = [];
   const cont = [
     'Spain',

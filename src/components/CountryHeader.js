@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const CountryHeader = (props) => {
   const { region } = props;
-  console.log(region);
   const totalConfirmedCases = region.reduce(
     (initial, element) => initial + element.today_confirmed,
     0,

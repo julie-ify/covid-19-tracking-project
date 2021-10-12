@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import store from './redux/ConfigureStore';
 import Main from './components/Main';
@@ -11,12 +11,16 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Switch>
-        <Route path="/" exact>
-          <Main />
-        </Route>
-        <Route path="/:id" exact component={CountryDetails} />
-      </Switch>
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Main />
+          </Route>
+          <Route path="/:id">
+            <CountryDetails />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
