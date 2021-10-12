@@ -4,10 +4,11 @@ const GET_COUNTRY = 'Covid_19_tracking_project/Country/GET_COUNTRY';
 
 const initialState = [];
 
-export const getCountry = () => async (dispatch) => {
-  const result = await getCountryData();
+export const getCountry = (payload) => async (dispatch) => {
+  const result = await getCountryData(payload);
   const data = await result;
-  const todayDate = dateFunc;
+  const todayDate = dateFunc();
+
   const dataArray = Object.values(data.dates[todayDate].countries);
   const countryData = dataArray.map((country) => ({
     id: country.id,
@@ -18,7 +19,7 @@ export const getCountry = () => async (dispatch) => {
   if (countryData) {
     dispatch({
       type: GET_COUNTRY,
-      payload: countryData,
+      payload: countryData[0],
     });
   }
 };

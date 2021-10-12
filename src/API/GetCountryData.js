@@ -9,13 +9,12 @@ export const dateFunc = () => {
   return day.join('-');
 };
 
-const getCountryData = async () => {
+const getCountryData = async (id) => {
   const todayDate = dateFunc();
   const response = await fetch(
-    `https://api.covid19tracking.narrativa.com/api/${todayDate}/country/Spain`
+    `https://api.covid19tracking.narrativa.com/api/${todayDate}/country/${id}`
   );
-  const dataResult = await response.json();
-  return dataResult;
+  return response.json();
 };
 
 export default getCountryData;
