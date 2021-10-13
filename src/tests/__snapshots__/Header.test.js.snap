@@ -39,6 +39,7 @@ exports[`renders correctly 1`] = `
       </span>
     </div>
     <div>
+      
       <span>
         All countries
       </span>

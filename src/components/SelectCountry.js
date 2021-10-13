@@ -20,7 +20,6 @@ const SelectCountry = (props) => {
           <div className="bigHeading">{country.name}</div>
           <div>
             {country.today_confirmed}
-            {' '}
             cases
           </div>
         </div>
@@ -34,8 +33,14 @@ SelectCountry.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     today_confirmed: PropTypes.number,
-  }).isRequired,
+  }),
   cardNumber: PropTypes.number.isRequired,
+};
+
+SelectCountry.defaultProps = {
+  country: PropTypes.shape({
+    id: '',
+  }),
 };
 
 export default SelectCountry;

@@ -37,7 +37,11 @@ const CountryHeader = (props) => {
 };
 
 CountryHeader.propTypes = {
-  region: PropTypes.arrayOf(PropTypes.object).isRequired,
+  region: PropTypes.arrayOf(PropTypes.object),
+};
+
+CountryHeader.defaultProps = {
+  region: [],
 };
 
 export default CountryHeader;

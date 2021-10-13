@@ -37,8 +37,8 @@ exports[`renders correctly 1`] = `
         Europe
       </p>
       <span>
-        Confirmed cases: 
-         
+        Confirmed cases:
+        0
       </span>
     </div>
   </div>

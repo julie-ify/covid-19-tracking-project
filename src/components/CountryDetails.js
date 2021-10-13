@@ -9,7 +9,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { getCountry } from '../redux/country/country';
 import Header from './Header';
-import SearchBar from './SearchBar';
 
 const CountryDetails = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -46,7 +45,7 @@ const CountryDetails = () => {
       </div>
       <div className="regionSearch">
         <div className="regions">region breakdown - 2021</div>
-        <SearchBar value={searchValue} handleChange={handleChange} />
+        <input placeholder="search country" className="searchBar" value={searchValue} onChange={handleChange} />
       </div>
       <div className="eachCountryGrid">
         {regions && regions

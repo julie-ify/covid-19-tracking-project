@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import CountryHeader from './CountryHeader';
 import Header from './Header';
 import SelectCountry from './SelectCountry';
-import SearchBar from './SearchBar';
 
 const Main = () => {
   let cardNumber = 0;
@@ -21,7 +20,7 @@ const Main = () => {
         <CountryHeader region={countries} />
         <div className="countrySearch">
           <div className="countries">stats by country - 2021</div>
-          <SearchBar value={searchBar} handleInput={handleChange} />
+          <input placeholder="search country" className="searchBar" value={searchBar} onChange={handleChange} />
         </div>
         <ul className="mainGrid">
           {countries
