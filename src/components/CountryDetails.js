@@ -59,7 +59,7 @@ const CountryDetails = () => {
               .includes(searchValue.toLocaleLowerCase());
           })
           .map((region) => (
-            <div className="eachCountryCard" key={id}>
+            <div className="eachCountryCard" key={region.id}>
               <div className="bgHeading">{region.name}</div>
               <div className="cases">
                 <div>

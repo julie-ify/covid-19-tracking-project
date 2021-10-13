@@ -14,9 +14,9 @@ body {
   font-size: 25px;
 }
 
-.appHeader {
+/* .appHeader {
   padding: 0.5rem 4rem;
-}
+} */
 
 .headerFlex {
   display: flex;
@@ -128,19 +128,20 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 0;
-  text-align: center;
+  padding: 3rem;
+  text-align: left;
   background-color: rgb(11, 11, 228);
+  font-size: 15px;
 }
 
 .eachCountryCard:nth-child(odd) {
   background-color: rgba(6, 6, 255, 0.658);
-  padding: 3rem 0;
 }
 
 .cases {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  column-gap: 2rem;
   align-items: center;
 }
 
@@ -181,4 +182,5 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-top: 5rem;
+  font-size: 15px;
 }
