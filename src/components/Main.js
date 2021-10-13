@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import CountryHeader from './CountryHeader';
 import Header from './Header';
 import SelectCountry from './SelectCountry';
+import SearchBar from './SearchBar';
 /* eslint-disable */
 
 const Main = () => {
@@ -35,6 +36,10 @@ const Main = () => {
       <Header />
       <div>
         <CountryHeader region={CountryWithRegion} />
+        <div className="countrySearch">
+          <div className="countries">region breakdown - 2021</div>
+          <SearchBar />
+        </div>
         <ul className="mainGrid">
           {CountryWithRegion.map((country) => {
             if (cardNumber + 1 > 4) {
@@ -42,7 +47,13 @@ const Main = () => {
             } else {
               cardNumber += 1;
             }
-            return <SelectCountry country={country} key={country.id} cardNumber={cardNumber} />;
+            return (
+              <SelectCountry
+                country={country}
+                key={country.id}
+                cardNumber={cardNumber}
+              />
+            );
           })}
         </ul>
       </div>

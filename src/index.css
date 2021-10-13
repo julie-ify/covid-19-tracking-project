@@ -7,7 +7,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(11, 11, 228);
-  color: #fff;
+  color: #f1f1f1;
 }
 
 .fontawesome {
@@ -155,4 +155,23 @@ body {
 .regions {
   background-color: rgb(11, 11, 228);
   padding: 1rem 1rem;
+}
+
+.regionSearch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.countries {
+  background-color: rgba(6, 6, 255, 0.658);
+  padding: 1rem 1rem;
+}
+
+.countrySearch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.searchBar {
+  padding: 0 1rem;
 }

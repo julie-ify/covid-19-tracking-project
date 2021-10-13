@@ -38,7 +38,7 @@ const CountryDetails = () => {
           <span>{today_confirmed}</span>
         </div>
       </div>
-      <div>
+      <div className="regionSearch">
         <div className="regions">region breakdown - 2021</div>
         <SearchBar />
       </div>
