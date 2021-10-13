@@ -4,7 +4,10 @@ import { useParams } from 'react-router-dom';
 import { getCountry } from '../redux/country/country';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from './Header';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowCircleRight,
+  faGlobeEurope,
+} from '@fortawesome/free-solid-svg-icons';
 
 const CountryDetails = () => {
   const dispatch = useDispatch();
@@ -22,10 +25,17 @@ const CountryDetails = () => {
 
   return (
     <div>
-      <Header countryName={name} />
       <div>
-        <h1>{name}</h1>
-        <span>{today_confirmed}</span>
+        <Header countryName={name} />
+      </div>
+      <div className="eachCountryHead">
+        <div className="eachCountry">
+          <h1>{name}</h1>
+          <span>{today_confirmed}</span>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faGlobeEurope} />
+        </div>
       </div>
       <div>
         {regions.map((region) => (

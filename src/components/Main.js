@@ -6,6 +6,7 @@ import SelectCountry from './SelectCountry';
 /* eslint-disable */
 
 const Main = () => {
+  let cardNumber = 0;
   const countries = useSelector((state) => state.countriesReducer.countries);
   const CountryWithRegion = [];
   const cont = [
@@ -30,14 +31,19 @@ const Main = () => {
       });
     });
   return (
-    <div>
+    <div className="appWrap">
       <Header />
       <div>
-      <CountryHeader region={CountryWithRegion} />
-        <ul>
-          {CountryWithRegion.map((country) => (
-            <SelectCountry country={country} key={country.id} />
-          ))}
+        <CountryHeader region={CountryWithRegion} />
+        <ul className="mainGrid">
+          {CountryWithRegion.map((country) => {
+            if (cardNumber + 1 > 4) {
+              cardNumber = 1;
+            } else {
+              cardNumber += 1;
+            }
+            return <SelectCountry country={country} key={country.id} cardNumber={cardNumber} />;
+          })}
         </ul>
       </div>
     </div>
