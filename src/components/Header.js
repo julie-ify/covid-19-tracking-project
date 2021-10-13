@@ -15,7 +15,7 @@ const Header = (props) => {
     <header className="appHeader">
       <div className="headerFlex">
         <div className="headerItems">
-          <Link to="/" exact className="regionLink">
+          <Link to="/" exact={`${true}`} className="regionLink">
             <FontAwesomeIcon icon={faAngleLeft} className="fontawesome" />
           </Link>
           <span>2021</span>
