@@ -4,7 +4,6 @@ import CountryHeader from './CountryHeader';
 import Header from './Header';
 import SelectCountry from './SelectCountry';
 import SearchBar from './SearchBar';
-/* eslint-disable */
 
 const Main = () => {
   let cardNumber = 0;
@@ -25,20 +24,15 @@ const Main = () => {
           <SearchBar value={searchBar} handleInput={handleChange} />
         </div>
         <ul className="mainGrid">
-          {countries &&
-            countries
+          {countries
+            && countries
               .filter((item) => {
                 if (searchBar === '') {
                   return item;
-                } else {
-                  if (
-                    item.name
-                      .toLowerCase()
-                      .includes(searchBar.toLocaleLowerCase())
-                  ) {
-                    return item;
-                  }
                 }
+                return item.name
+                  .toLowerCase()
+                  .includes(searchBar.toLocaleLowerCase());
               })
               .map((country) => {
                 if (cardNumber + 1 > 4) {

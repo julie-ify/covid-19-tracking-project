@@ -3,17 +3,17 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from '../redux/ConfigureStore';
-import Header from '../components/Header';
+import CountryDetails from '../components/CountryDetails';
 
 it('renders correctly', () => {
-  const header = renderer
+  const countryDetails = renderer
     .create(
       <Provider store={store}>
         <BrowserRouter>
-          <Header />
+          <CountryDetails />
         </BrowserRouter>
       </Provider>,
     )
     .toJSON();
-  expect(header).toMatchSnapshot();
+  expect(countryDetails).toMatchSnapshot();
 });

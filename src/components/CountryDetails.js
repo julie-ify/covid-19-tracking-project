@@ -1,13 +1,14 @@
+/* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { getCountry } from '../redux/country/country';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Header from './Header';
 import {
   faArrowCircleRight,
   faGlobeEurope,
 } from '@fortawesome/free-solid-svg-icons';
+import { getCountry } from '../redux/country/country';
+import Header from './Header';
 import SearchBar from './SearchBar';
 
 const CountryDetails = () => {
@@ -52,28 +53,28 @@ const CountryDetails = () => {
           .filter((item) => {
             if (searchValue === '') {
               return item;
-            } else {
-              if (
-                item.name
-                  .toLowerCase()
-                  .includes(searchValue.toLocaleLowerCase())
-              ) {
-                return item;
-              }
             }
+            return item.name
+              .toLowerCase()
+              .includes(searchValue.toLocaleLowerCase());
           })
           .map((region) => (
-            <div className="eachCountryCard">
+            <div className="eachCountryCard" key={id}>
               <div className="bgHeading">{region.name}</div>
               <div className="cases">
-                <div>Confirmed cases: {region.today_confirmed}</div>
+                <div>
+                  Confirmed cases:
+                  {region.today_confirmed}
+                </div>
                 <FontAwesomeIcon icon={faArrowCircleRight} />
               </div>
             </div>
           ))}
-          {!regions.length && (
-            <h1 className="errorMsg">There're no listed regions for this country!!</h1>
-          )}
+        {!regions.length && (
+          <h1 className="errorMsg">
+            There&apos;re no listed regions for this country!!
+          </h1>
+        )}
       </div>
     </div>
   );

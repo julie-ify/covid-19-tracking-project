@@ -18,7 +18,11 @@ const SelectCountry = (props) => {
         </Link>
         <div className="countryStat">
           <div className="bigHeading">{country.name}</div>
-          <div>{country.today_confirmed} cases</div>
+          <div>
+            {country.today_confirmed}
+            {' '}
+            cases
+          </div>
         </div>
       </div>
     </div>
@@ -31,6 +35,7 @@ SelectCountry.propTypes = {
     name: PropTypes.string,
     today_confirmed: PropTypes.number,
   }).isRequired,
+  cardNumber: PropTypes.number.isRequired,
 };
 
 export default SelectCountry;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAngleLeft,
@@ -14,7 +15,7 @@ const Header = (props) => {
     <header className="appHeader">
       <div className="headerFlex">
         <div className="headerItems">
-          <Link to='/' exact className="regionLink">
+          <Link to="/" exact className="regionLink">
             <FontAwesomeIcon icon={faAngleLeft} className="fontawesome" />
           </Link>
           <span>2021</span>
@@ -32,4 +33,7 @@ const Header = (props) => {
   );
 };
 
+Header.propTypes = {
+  countryName: PropTypes.string.isRequired,
+};
 export default Header;

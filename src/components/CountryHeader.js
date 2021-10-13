@@ -7,20 +7,16 @@ const CountryHeader = (props) => {
   const { region } = props;
 
   let totalConfirmedCases = 0;
-  const totalCases =
-    region &&
-    region.map((item) => {
+  const totalCases = region
+    && region.map((item) => {
       if (item.today_confirmed) {
-        totalConfirmedCases = totalConfirmedCases + item.today_confirmed;
+        totalConfirmedCases += item.today_confirmed;
       }
       return totalConfirmedCases;
     });
 
-  const addTotalCases =
-    totalCases &&
-    totalCases.reduce((initial, element) => {
-      return initial + element;
-    }, 0);
+  const addTotalCases = totalCases
+    && totalCases.reduce((initial, element) => initial + element, 0);
 
   return (
     <div className="countryHeader">
@@ -30,7 +26,10 @@ const CountryHeader = (props) => {
       <div className="headerTextWrap">
         <div className="headerText">
           <p className="bigHeading">Europe</p>
-          <span>Confirmed cases: {addTotalCases} </span>
+          <span>
+            Confirmed cases:
+            {addTotalCases}
+          </span>
         </div>
       </div>
     </div>
