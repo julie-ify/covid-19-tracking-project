@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-const SearchBar = () => (
-  <input placeholder="search country" className="searchBar"/>
-)
+const SearchBar = ({ searchValue, handleChange }) => (
+  <input placeholder="search country" className="searchBar" value={searchValue} onChange={handleChange} />
+);
 
 export default SearchBar;

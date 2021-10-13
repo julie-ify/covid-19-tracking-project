@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getCountry } from '../redux/country/country';
@@ -11,6 +11,7 @@ import {
 import SearchBar from './SearchBar';
 
 const CountryDetails = () => {
+  const [searchValue, setSearchValue] = useState('');
   const dispatch = useDispatch();
   const { id } = useParams();
   useEffect(() => {
@@ -23,6 +24,10 @@ const CountryDetails = () => {
     return null;
   }
   const { name, today_confirmed, regions } = country;
+
+  const handleChange = (e) => {
+    setSearchValue(() => e.target.value);
+  };
 
   return (
     <div>
@@ -40,18 +45,32 @@ const CountryDetails = () => {
       </div>
       <div className="regionSearch">
         <div className="regions">region breakdown - 2021</div>
-        <SearchBar />
+        <SearchBar value={searchValue} handleChange={handleChange} />
       </div>
       <div className="eachCountryGrid">
-        {regions.map((region) => (
-          <div className="eachCountryCard">
-            <div className="bgHeading">{region.name}</div>
-            <div className="cases">
-              <div>Confirmed cases: {region.today_confirmed}</div>
-              <FontAwesomeIcon icon={faArrowCircleRight} />
+        {regions
+          .filter((item) => {
+            if (searchValue === '') {
+              return item;
+            } else {
+              if (
+                item.name
+                  .toLowerCase()
+                  .includes(searchValue.toLocaleLowerCase())
+              ) {
+                return item;
+              }
+            }
+          })
+          .map((region) => (
+            <div className="eachCountryCard">
+              <div className="bgHeading">{region.name}</div>
+              <div className="cases">
+                <div>Confirmed cases: {region.today_confirmed}</div>
+                <FontAwesomeIcon icon={faArrowCircleRight} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
