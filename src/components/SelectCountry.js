@@ -34,13 +34,14 @@ SelectCountry.propTypes = {
     name: PropTypes.string,
     today_confirmed: PropTypes.number,
   }),
-  cardNumber: PropTypes.number.isRequired,
+  cardNumber: PropTypes.number,
 };
 
 SelectCountry.defaultProps = {
   country: PropTypes.shape({
     id: '',
   }),
+  cardNumber: 0,
 };
 
 export default SelectCountry;

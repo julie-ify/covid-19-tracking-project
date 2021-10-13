@@ -26,7 +26,7 @@ describe('test API', () => {
   });
   it('returns an array of objects', () => {
     const dataAPI = getCountriesData();
-    const dataArray = Object.values(dataAPI.dates[todayDate].countries);
-    expect(dataArray.[0]).toEqual(expect.objectContaining({ id: 'spain' }));
+    // const dataArray = Object.values(dataAPI.dates[todayDate].countries);
+    expect(dataAPI.dates[todayDate].countries).toEqual(expect.objectContaining({ id: 'spain' }));
   });
 });
