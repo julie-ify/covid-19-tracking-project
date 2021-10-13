@@ -112,14 +112,47 @@ body {
 /* CountryDetails component */
 
 .eachCountry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
   padding-right: 1rem;
   height: 50vh;
   background-color: blue;
 }
 
-.eachCountryHead {
+.eachCountryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.eachCountryCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  text-align: center;
+  background-color: rgb(11, 11, 228);
+}
+
+.eachCountryCard:nth-child(odd) {
+  background-color: rgba(6, 6, 255, 0.658);
+  padding: 3rem 0;
+}
+
+.cases {
   display: flex;
-  align-items: right;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bgHeading {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.regions {
+  background-color: rgb(11, 11, 228);
+  padding: 1rem 1rem;
 }

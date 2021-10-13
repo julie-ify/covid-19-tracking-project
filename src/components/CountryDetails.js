@@ -8,6 +8,7 @@ import {
   faArrowCircleRight,
   faGlobeEurope,
 } from '@fortawesome/free-solid-svg-icons';
+import SearchBar from './SearchBar';
 
 const CountryDetails = () => {
   const dispatch = useDispatch();
@@ -28,21 +29,27 @@ const CountryDetails = () => {
       <div>
         <Header countryName={name} />
       </div>
-      <div className="eachCountryHead">
-        <div className="eachCountry">
+      <div className="eachCountry">
+        <div>
+          <FontAwesomeIcon icon={faGlobeEurope} className="imgCover" />
+        </div>
+        <div className="eachCountryHead">
           <h1>{name}</h1>
           <span>{today_confirmed}</span>
         </div>
-        <div>
-          <FontAwesomeIcon icon={faGlobeEurope} />
-        </div>
       </div>
       <div>
+        <div className="regions">region breakdown - 2021</div>
+        <SearchBar />
+      </div>
+      <div className="eachCountryGrid">
         {regions.map((region) => (
-          <div>
-            <div>{region.name}</div>
-            <div>Confirmed cases: {region.today_confirmed}</div>
-            <FontAwesomeIcon icon={faArrowCircleRight} />
+          <div className="eachCountryCard">
+            <div className="bgHeading">{region.name}</div>
+            <div className="cases">
+              <div>Confirmed cases: {region.today_confirmed}</div>
+              <FontAwesomeIcon icon={faArrowCircleRight} />
+            </div>
           </div>
         ))}
       </div>
