@@ -179,3 +179,9 @@ body {
 .searchBar {
   padding: 0 1rem;
 }
+
+.errorMsg {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 5rem;
+}

@@ -48,30 +48,32 @@ const CountryDetails = () => {
         <SearchBar value={searchValue} handleChange={handleChange} />
       </div>
       <div className="eachCountryGrid">
-        {regions &&
-          regions
-            .filter((item) => {
-              if (searchValue === '') {
+        {regions && regions
+          .filter((item) => {
+            if (searchValue === '') {
+              return item;
+            } else {
+              if (
+                item.name
+                  .toLowerCase()
+                  .includes(searchValue.toLocaleLowerCase())
+              ) {
                 return item;
-              } else {
-                if (
-                  item.name
-                    .toLowerCase()
-                    .includes(searchValue.toLocaleLowerCase())
-                ) {
-                  return item;
-                }
               }
-            })
-            .map((region) => (
-              <div className="eachCountryCard">
-                <div className="bgHeading">{region.name}</div>
-                <div className="cases">
-                  <div>Confirmed cases: {region.today_confirmed}</div>
-                  <FontAwesomeIcon icon={faArrowCircleRight} />
-                </div>
+            }
+          })
+          .map((region) => (
+            <div className="eachCountryCard">
+              <div className="bgHeading">{region.name}</div>
+              <div className="cases">
+                <div>Confirmed cases: {region.today_confirmed}</div>
+                <FontAwesomeIcon icon={faArrowCircleRight} />
               </div>
-            ))}
+            </div>
+          ))}
+          {!regions.length && (
+            <h1 className="errorMsg">There're no listed regions for this country!!</h1>
+          )}
       </div>
     </div>
   );
