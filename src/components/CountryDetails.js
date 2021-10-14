@@ -45,7 +45,7 @@ const CountryDetails = () => {
       </div>
       <div className="regionSearch">
         <div className="regions">region breakdown - 2021</div>
-        <input placeholder="search country" className="searchBar" value={searchValue} onChange={handleChange} />
+        <input placeholder="Search..." className="searchBar" value={searchValue} onChange={handleChange} />
       </div>
       <div className="eachCountryGrid">
         {regions && regions
@@ -62,8 +62,9 @@ const CountryDetails = () => {
               <div className="bgHeading">{region.name}</div>
               <div className="cases">
                 <div>
-                  Confirmed cases:
                   {region.today_confirmed}
+                  {' '}
+                  confirmed cases
                 </div>
                 <FontAwesomeIcon icon={faArrowCircleRight} />
               </div>

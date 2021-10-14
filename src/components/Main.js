@@ -20,7 +20,7 @@ const Main = () => {
         <CountryHeader region={countries} />
         <div className="countrySearch">
           <div className="countries">stats by country - 2021</div>
-          <input placeholder="search country" className="searchBar" value={searchBar} onChange={handleChange} />
+          <input placeholder="Search..." className="searchBar" value={searchBar} onChange={handleChange} />
         </div>
         <ul className="mainGrid">
           {countries

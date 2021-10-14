@@ -22,7 +22,7 @@ const Header = (props) => {
         </div>
         <div>
           {countryName && <span>{countryName}</span>}
-          {!countryName && <span>All countries</span>}
+          {!countryName && <span>All Countries Data</span>}
         </div>
         <div className="headerItems">
           <FontAwesomeIcon icon={faMicrophoneAlt} />

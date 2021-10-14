@@ -25,10 +25,11 @@ const CountryHeader = (props) => {
       </div>
       <div className="headerTextWrap">
         <div className="headerText">
-          <p className="bigHeading">Europe</p>
+          <p className="bigHeading">All Countries with Covid-19 cases</p>
           <span>
-            Confirmed cases:
             {addTotalCases}
+            {' '}
+            confirmed cases
           </span>
         </div>
       </div>

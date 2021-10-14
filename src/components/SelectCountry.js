@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowCircleRight,
+  faGlobeEurope,
+} from '@fortawesome/free-solid-svg-icons';
 
 const SelectCountry = (props) => {
   const { country, cardNumber } = props;
@@ -12,15 +15,19 @@ const SelectCountry = (props) => {
         cardNumber === 2 || cardNumber === 3 ? 'coloredCard' : 'plainCard'
       }
     >
-      <div className="selectCountry">
-        <Link to={`${country.id}`} className="regionLink">
-          <FontAwesomeIcon icon={faArrowCircleRight} />
-        </Link>
-        <div className="countryStat">
-          <div className="bigHeading">{country.name}</div>
-          <div>
-            {country.today_confirmed}
-            cases
+      <div className="countryMap">
+        <FontAwesomeIcon icon={faGlobeEurope} className="map" />
+        <div className="selectCountry">
+          <Link to={`${country.id}`} className="regionLink">
+            <FontAwesomeIcon icon={faArrowCircleRight} />
+          </Link>
+          <div className="countryStat">
+            <div className="bigHeading">{country.name}</div>
+            <div>
+              {country.today_confirmed}
+              {' '}
+              cases
+            </div>
           </div>
         </div>
       </div>
