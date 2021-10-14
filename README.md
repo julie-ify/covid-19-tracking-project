@@ -1,11 +1,14 @@
 # Covid-19-Tracking-Project
-> a mobile web application to check a list of Countries with covid-19 cases. The application has two pages. Homepage displays a list of Countries that could be filtered by Country's name. The detail page shows details for all regions with total number of confiremd cases.
+
+> A mobile web application to check a list of Countries with covid-19 cases. The application has two pages. Homepage displays a list of Countries that could be filtered by Country's name. The detail page shows details for all regions with total number of confiremd cases.
 
 ### Countries (Homepage)
-![screenshot](./rockets.png)
+
+![screenshot](./src/image/homepage.png)
 
 ### Regions (detail page)
-![screenshot](./missions.png)
+
+![screenshot](./src/image/detailpage.png)
 
 ## Built With
 
@@ -14,11 +17,11 @@
 
 ## Live demo
 
-[Space Travelers Hub](https://zeenatlawal.github.io/Space-Travelers-Hub/#/)
+[Covid-19-Tracking-Project](https://julie-ify.github.io/covid-19-tracking-project/)
 
 ## Getting Started
 
-### To get a local copy run the following steps:
+### To get a local copy, run the following steps:
 
 - Copy this link `git@github.com:julie-ify/covid-19-tracking-project.git`
 - Open your terminal or command line

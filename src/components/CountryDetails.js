@@ -39,8 +39,12 @@ const CountryDetails = () => {
           <FontAwesomeIcon icon={faGlobeEurope} className="imgCover" />
         </div>
         <div className="eachCountryHead">
-          <h1>{name}</h1>
-          <span>{today_confirmed}</span>
+          <h1 className="bigHeading">{name}</h1>
+          <span>
+            {today_confirmed}
+            {' '}
+            confirmed cases
+          </span>
         </div>
       </div>
       <div className="regionSearch">
