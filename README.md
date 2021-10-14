@@ -20,7 +20,7 @@
 [Covid-19-Tracking-Project](https://compassionate-hamilton-ee5949.netlify.app/)
 
 ## Video Presentation
-[Check my video presentation here](https://www.loom.com/share/2ee0bcacd5c04077a0a978a24d1f5a86)
+[Check my video presentation](https://www.loom.com/share/2ee0bcacd5c04077a0a978a24d1f5a86)
 
 ## Getting Started
 
