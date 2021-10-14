@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -23,7 +22,8 @@ const CountryDetails = () => {
   if (!country) {
     return null;
   }
-  const { name, today_confirmed, regions } = country;
+  const { name, regions } = country;
+  const confirmed = country.today_confirmed;
 
   const handleChange = (e) => {
     setSearchValue(() => e.target.value);
@@ -41,7 +41,7 @@ const CountryDetails = () => {
         <div className="eachCountryHead">
           <h1 className="bigHeading">{name}</h1>
           <span>
-            {today_confirmed}
+            {confirmed}
             {' '}
             confirmed cases
           </span>

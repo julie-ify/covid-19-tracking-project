@@ -14,10 +14,6 @@ body {
   font-size: 25px;
 }
 
-/* .appHeader {
-  padding: 0.5rem 4rem;
-} */
-
 .headerFlex {
   display: flex;
   flex-direction: row;

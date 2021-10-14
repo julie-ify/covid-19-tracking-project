@@ -1,4 +1,3 @@
-/* eslint-disable */
 export const dateFunc = () => {
   const date = new Date();
   const d = date.toLocaleDateString();
@@ -12,7 +11,7 @@ export const dateFunc = () => {
 const getCountryData = async (id) => {
   const todayDate = dateFunc();
   const response = await fetch(
-    `https://api.covid19tracking.narrativa.com/api/${todayDate}/country/${id}`
+    `https://api.covid19tracking.narrativa.com/api/${todayDate}/country/${id}`,
   );
   return response.json();
 };
