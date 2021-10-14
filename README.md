@@ -17,7 +17,7 @@
 
 ## Live demo
 
-[Covid-19-Tracking-Project](https://julie-ify.github.io/covid-19-tracking-project/)
+[Covid-19-Tracking-Project](https://compassionate-hamilton-ee5949.netlify.app/)
 
 ## Getting Started
 
