@@ -34,11 +34,12 @@ exports[`renders correctly 1`] = `
       <p
         className="bigHeading"
       >
-        Europe
+        All Countries with Covid-19 cases
       </p>
       <span>
-        Confirmed cases:
         0
+         
+        confirmed cases
       </span>
     </div>
   </div>

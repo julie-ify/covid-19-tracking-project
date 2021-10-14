@@ -41,7 +41,7 @@ exports[`renders correctly 1`] = `
     <div>
       
       <span>
-        All countries
+        All Countries Data
       </span>
     </div>
     <div
