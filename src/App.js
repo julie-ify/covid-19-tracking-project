@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Provider } from 'react-redux';
 import store from './redux/ConfigureStore';
 import Main from './components/Main';
 import { getCountries } from './redux/countries/Countries';
@@ -9,8 +10,9 @@ function App() {
   useEffect(() => {
     store.dispatch(getCountries());
   }, []);
+
   return (
-    <div className="App">
+    <Provider store={store}>
       <Router>
         <Switch>
           <Route path="/" exact>
@@ -21,7 +23,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </Provider>
   );
 }
 
