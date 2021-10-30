@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: rgb(11, 11, 228);
+  background-color: #23395b;
   color: #f1f1f1;
 }
 
@@ -39,33 +39,26 @@ body {
 /* Country Header Component */
 
 .countryHeader {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
   height: 50vh;
-  background-color: rgb(9, 9, 231);
-}
-
-.imgCover {
-  font-size: 210px;
-  padding: 1rem;
-  color: rgb(13, 13, 197);
-}
-
-.imgWrap {
+  color: #fff;
+  background-image: url('./image/globe-flag.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 100%;
-  text-align: right;
 }
 
 .headerText {
   padding: 4rem 1rem;
+  text-align: center;
+  opacity: 10;
 }
 
 .headerTextWrap {
   width: 100%;
   height: 100%;
+  background-color: #225f8b;
+  opacity: 0.5;
 }
 
 .bigHeading {
@@ -79,12 +72,12 @@ body {
 
 .coloredCard {
   padding: 0.5rem;
-  background-color: rgba(10, 10, 202, 0.658);
+  background-color: #406e8e;
 }
 
 .plainCard {
   padding: 0.5rem;
-  background-color: rgb(8, 8, 197);
+  background-color: #23395b;
 }
 
 .mainGrid {
@@ -108,7 +101,7 @@ body {
 
 .map {
   font-size: 100px;
-  color: rgb(12, 12, 160);
+  color: #225f8b;
 }
 
 .appWrap {
@@ -124,7 +117,6 @@ body {
   column-gap: 2rem;
   padding-right: 1rem;
   height: 50vh;
-  background-color: rgb(9, 9, 231);
 }
 
 .eachCountryGrid {
@@ -139,12 +131,13 @@ body {
   justify-content: space-between;
   padding: 3rem;
   text-align: left;
-  background-color: rgba(10, 10, 202, 0.658);
   font-size: 15px;
+  background-color: #23395b;
+  box-shadow: 3px 3px 7px #333;
 }
 
 .eachCountryCard:nth-child(odd) {
-  background-color: rgb(8, 8, 197);
+  background-color: #406e8e;
 }
 
 .cases {
@@ -160,7 +153,7 @@ body {
 }
 
 .regions {
-  background-color: rgba(10, 10, 202, 0.658);
+  background-color: #4e7997;
   padding: 1rem 1rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -172,7 +165,7 @@ body {
 }
 
 .countries {
-  background-color: rgba(10, 10, 202, 0.658);
+  background-color: #406e8e;
   padding: 1rem 1rem;
   text-transform: uppercase;
   font-weight: bold;
