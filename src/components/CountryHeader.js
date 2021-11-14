@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
 
 const CountryHeader = (props) => {
   const { region } = props;
@@ -20,9 +18,6 @@ const CountryHeader = (props) => {
 
   return (
     <div className="countryHeader">
-      <div className="imgWrap">
-        <FontAwesomeIcon icon={faGlobeEurope} className="imgCover" />
-      </div>
       <div className="headerTextWrap">
         <div className="headerText">
           <p className="bigHeading">All Countries with Covid-19 cases</p>
