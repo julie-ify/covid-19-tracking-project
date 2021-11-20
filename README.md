@@ -6,10 +6,6 @@
 
 ![screenshot](./src/image/homepage.png)
 
-### Regions (detail page)
-
-![screenshot](./src/image/detailpage.png)
-
 ## Built With
 
 - ReactJS
@@ -17,7 +13,7 @@
 
 ## Live demo
 
-[Covid-19-Tracking-Project](https://compassionate-hamilton-ee5949.netlify.app/)
+[Covid-19-Tracking-Project](https://youthful-jang-73c0e7.netlify.app/)
 
 ## Video Presentation
 [Check my video presentation](https://www.loom.com/share/2ee0bcacd5c04077a0a978a24d1f5a86)
